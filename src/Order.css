@@ -1,0 +1,215 @@
+.order-list {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+.blockoder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 600px;
+    text-align: center;
+}
+.titlOrder {
+    margin-left: 10px;
+    margin-right: 0px;
+    flex: 1; 
+}
+.titlOrder h3{
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 20px;
+    color: #365E32;
+    text-transform: uppercase;
+  }
+.butOrder {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+   }
+.butOrder button {
+    margin: 0 5px;
+}
+.butDelOde {
+    margin-left: auto;
+}
+img {
+    margin-right: 10px;
+}
+.order-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.zakazOrder{
+    width: 100px;
+    text-align: right;
+}
+.zakazOrder h3{
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 20px;
+    color: #365E32;
+   }
+.sumOrder{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: #365E32;
+    font-weight: 600;
+    }
+.butOrder button{
+    border: none;
+    background-color:white;   
+}
+.butDelOde button{
+    border: none;
+    background-color:white;    
+}    
+    
+.butMinusOrd{
+    width: 20px;
+    cursor: pointer; 
+          }
+.butPlusOrd{
+     width: 21px;
+     cursor: pointer; 
+        }     
+.butDelOrd{
+    width: 25px;
+    cursor: pointer; 
+         }
+.orderForm{
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid  #365E32;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: #365E32;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer; 
+  }
+.orderForm:hover{
+    background-color:#B3E2A7;
+  }
+.oderBackNav{
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid  #365E32;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #81A263;
+    font-weight: 400;
+    letter-spacing: 2px;
+    cursor: pointer; 
+     }
+.oderBackNav:hover{
+    background-color:#B3E2A7;
+     }     
+.sumOrder{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: #365E32;
+    font-weight: 600;
+        }     
+.orderBlockBut{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+@media (max-width: 768px) {
+.blockoder {
+    margin-bottom: 20px;
+    padding: 5px;
+     width: 500px;
+    }
+.order-list {
+    margin: 10px;    
+ }
+ .zakazOrder{
+    width: 100px;
+   }
+.zakazOrder h3{
+     font-size: 18px;
+     }
+.titlOrder h3{
+    font-size: 18px;
+      } 
+.butDelOde button{
+    margin-left: -15px;
+    margin-right: -5px;    
+}
+.butMinusOrd{
+    margin-right: -3px;
+            }                         
+}
+@media (max-width: 480px) {
+.blockoder {
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 340px;
+    margin-right: 4px;
+        }
+.order-list {
+    margin: 5px;    
+     }
+.zakazOrder{
+    width: 100px;
+       }
+.zakazOrder h3{
+    font-size: 13px;
+         }
+.titlOrder h3{
+    font-size: 11px;
+          }
+.titlOrder {
+    margin-left: 5px;
+    margin-right: 0px;
+   }           
+.blockoderImg{
+    width: 45px;
+    }
+.butMinusOrd{
+    width: 15px;
+    margin-right: -3px;
+            }
+.butPlusOrd{
+    width: 15px;
+    margin-left: -3px;
+            }
+.butDelOrd{
+    width: 20px;
+           }
+.butDelOde button{
+    margin-left: -15px;
+    margin-right: -5px;    
+}               
+.butOrder {
+    margin-left: 0px;
+            }
+.sumOrder{
+    font-size: 16px;
+            }
+.oderBackNav{
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 5px 10px;
+         }
+.orderForm{
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 5px 15px;
+      } 
+.sumOrder{
+    font-size: 16px;
+          }                                
+   }                          
+ 

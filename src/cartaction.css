@@ -1,0 +1,47 @@
+.blockCartAction {
+    width: 400px;
+    margin-top: -70px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+  }
+  .titlCartAction{
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 20px;
+    color: #365E32;
+    text-transform: uppercase;
+  }
+  .titlcontCartAction{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: grey;
+  }
+  .butCartAction{
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid  #365E32;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: #365E32;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+.butCartAction:hover{
+    background-color:#B3E2A7;
+      } 
+
+@media (max-width: 480px) {
+  .blockCartAction {
+    width: 330px;
+    padding: 10px;
+  } 
+  .cartActionImg{
+    width: 330px;
+  }
+    }         

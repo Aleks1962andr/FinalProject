@@ -1,0 +1,67 @@
+.blockSort{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #BFF6C3;
+    border-radius: 10px;
+    margin-left: 650px;
+   }    
+.iconSort{
+    width: 30px;
+    border: none;
+    background-color: #BFF6C3;
+        }
+.blockSortPosition{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}          
+.blockSortPosition label{
+    margin-left: 15px; 
+    font-family: "Fira Sans Condensed", sans-serif;
+    text-transform: uppercase;
+    flex: 1;
+}
+
+.blockSortHeader{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;  
+}
+.blokInputbut{
+    margin-left: 30px;
+    display: flex;
+    align-items: center; 
+    }
+  .blokInputbut input{
+    cursor: pointer; 
+}
+ 
+@media (max-width: 768px) {
+.blockSort{
+    width: 240px;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: 140px;
+      }
+.blockSortHeader h2 {
+    font-size: 16px;
+   }
+.blockSortPosition label{
+    font-size: 12px;
+   }
+.iconSort{
+    width: 20px;
+          } 
+.blockSortPosition{
+    padding: 10px;              
+       } 
+}
+       
+@media (max-width: 480px) {
+.blockSort{
+    margin-left: 80px;
+      }  
+}                

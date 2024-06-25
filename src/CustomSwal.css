@@ -1,0 +1,30 @@
+.custom-popup {
+    border: 3px solid #A1DD70;
+    border-radius: 10px;
+}
+
+.custom-title {
+    color: #d33;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.custom-content {
+    color: #6c2020;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+.custom-confirm-button {
+    background-color: #06D001;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.custom-confirm-button:hover {
+    background-color: #059212;
+}
