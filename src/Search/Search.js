@@ -1,17 +1,16 @@
-import { useState, useContext } from 'react';
-import { data } from './Data';
-import { Link, useNavigate } from 'react-router-dom';
-import { OrderContext } from './OrderContext';
+import { useState } from 'react';
+import { data } from '../Data';
+import { Link } from 'react-router-dom';
 import './Search.css';
 import Swal from 'sweetalert2';
 import './CustomSwal.css';
 
 
 function Search() {
-    const { addToOrder } = useContext(OrderContext); 
-    const navigate = useNavigate();
+     
     const [mySearch, setMySearch] = useState("");
     const [wordSubmitted, setWordSubmitted] = useState('');
+    
 
     const myRecipeSearch = (e) => {
         setMySearch(e.target.value);

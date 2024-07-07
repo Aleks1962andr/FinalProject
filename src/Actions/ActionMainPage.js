@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { dataaction } from "./DataAction";
-import './PageTwo.css';
+import './ActionMainPage.css';
 import { Link } from "react-router-dom";
+import rightImage from './right.jpg';
+import leftImage from './left.jpg';
 
-
-function PageTwo() {
+function ActionMainPage() {
  const[picture, setPicture] =useState(0);
  const{id, titleac, imageac} = dataaction[picture]
  
@@ -31,7 +32,7 @@ function PageTwo() {
     return (
       <div className="blockTwo" >
         <div>
-<button onClick={previousPicture} className="butBlock"><img src={require("./right.jpg")} alt="left" className="imgButton"/></button>
+<button onClick={previousPicture} className="butBlock"><img src={rightImage} alt="right" className="imgButton"/></button>
       </div>
  
         <div >
@@ -41,10 +42,10 @@ function PageTwo() {
        </div>
 
         <div>
-<button onClick={nextPicture} className="butBlock"><img src={require("./left.jpg")} alt="left" className="imgButton"/></button>
+<button onClick={nextPicture} className="butBlock"><img src={leftImage} alt="left" className="imgButton"/></button>
 </div>
       </div>
     );
   }
   
-  export default PageTwo;
+  export default ActionMainPage;

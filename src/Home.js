@@ -1,38 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { data } from './Data';
-import Menu from './Menu';
-import PageTwo from './PageTwo';
-import Colontitul from './Colontitul';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Menu from './Dishes/Menu';
+import ActionMainPage from './Actions/ActionMainPage';
+import Colontitul from './Colontitul/Colontitul';
+import { setCategory, setSortOption } from './Redux/filterSlice';
 
 function Home({ category, sortOption }) {
-  const [dish, setDish] = useState(data);
-  const [filteredDishes, setFilteredDishes] = useState(data);
+  const dispatch = useDispatch();
+  const { groupedDishes } = useSelector((state) => state.filter);
 
   useEffect(() => {
-    if (category) {
-      const filtered = dish.filter(d => d.name === category);
-      setFilteredDishes(filtered);
-    } else {
-      setFilteredDishes(dish);
-    }
-  }, [category, dish]);
+    dispatch(setCategory(category));
+  }, [category, dispatch]);
 
   useEffect(() => {
-    if (sortOption === 'desc') {
-      setFilteredDishes(prevDishes => [...prevDishes].sort((a, b) => b.price - a.price));
-    } else if (sortOption === 'asc') {
-      setFilteredDishes(prevDishes => [...prevDishes].sort((a, b) => a.price - b.price));
-    } else {
-      setFilteredDishes(dish);
+    if (sortOption) {
+      dispatch(setSortOption(sortOption));
     }
-  }, [sortOption, dish]);
+  }, [sortOption, dispatch]);
 
   return (
     <div>
       <div className='cont'>
-        <PageTwo />
+        <ActionMainPage />
       </div>
-      <Menu choice={filteredDishes} sortOption={sortOption} />
+      <Menu groupedDishes={groupedDishes} />
       <Colontitul />
     </div>
   );

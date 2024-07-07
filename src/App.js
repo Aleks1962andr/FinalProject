@@ -1,18 +1,19 @@
-
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import { OrderProvider } from './OrderContext';
+import { Provider } from 'react-redux';
+import { store } from './Redux/store';
 import Main from './Main'; 
 
 function App() {
   return (
     <Router>
-      <OrderProvider>
+      <Provider store={store}>
         <Main /> 
-      </OrderProvider>
+      </Provider>
     </Router>
   );
 }
 
 export default App;
+

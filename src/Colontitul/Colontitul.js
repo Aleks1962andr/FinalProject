@@ -1,4 +1,3 @@
-import logo from './logos.jpg';
 import './colontitul.css';
 import logoInst from './instag.jpg'
 import logoWatts from './watts.jpg'
@@ -8,7 +7,7 @@ function Colontitul() {
     return (
      <div className='blockColontitul'>
      <div className='colomImg'>
-     <img src={logo} alt="Logo" className="logoColon" /> 
+     <img src="/image/logos.jpg" alt="Logo" className="logoColon" /> 
      </div>
 
      <div className="colontitul">

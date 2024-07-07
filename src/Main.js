@@ -1,29 +1,26 @@
-// Main.js
-
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Home from './Home';
-import Delivery from './Delivery';
-import CartDish from './CartDish';
-import Search from './Search';
-import Order from './Order';
-import Action from './Action';
-import CartAction from './CartAction';
-import Sorting from './Sorting';
+import Delivery from './Delivery/Delivery';
+import CartDish from './Dishes/CartDish';
+import Search from './Search/Search';
+import Order from './Order/Order';
+import Action from './Actions/Action';
+import CartAction from './Actions/CartAction';
+import Sorting from './Sorting/Sorting';
 import Navbar from './Navbar';
-import { OrderContext } from './OrderContext';
 
 const Main = () => {
   const [category, setCategory] = useState('');
   const [sortOption, setSortOption] = useState('none');
-  const { order } = useContext(OrderContext);
+  const order = useSelector((state) => state.cart.cartItems);
   const navigate = useNavigate();
 
   const handleCategoryChange = (newCategory) => {
     setCategory(newCategory);
     navigate('/');
-    console.log('Category set to:', newCategory);
-  };
+     };
 
   const handleCartClick = (e) => {
     if (order.length === 0) {

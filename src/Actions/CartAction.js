@@ -24,9 +24,9 @@ function CartAction() {
     return (
         <div className={`container ${overlayActive ? 'overlay-active' : ''}`}>
             <div className="overlay" onClick={() => setOverlayActive(false)}></div>
-            {dataaction.filter((item) => item.titleac === titleac).map((elem, index) => (
+            {dataaction.filter((item) => item.titleac === titleac).map((elem, elemId) => (
               
-                <div key={index} className='blockCartAction'>
+                <div key={elemId} className='blockCartAction'>
                     <div>
                         <img src={process.env.PUBLIC_URL + elem.imageac} width="400px" alt="foto" className='cartActionImg'/>
                     </div>

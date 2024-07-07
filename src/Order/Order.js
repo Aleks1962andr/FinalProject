@@ -1,18 +1,19 @@
-import { useContext } from 'react';
-import { OrderContext } from './OrderContext';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeFromOrder, updateOrder } from '../Redux/cartSlice';
 import './Order.css';
 import { useNavigate } from 'react-router-dom';
 
 function Order() {
-    const { order, removeFromOrder, updateOrder } = useContext(OrderContext);
+    const order = useSelector((state) => state.cart.cartItems);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const increment = (id) => {
-        updateOrder(id, prevQuantity => prevQuantity + 1);
+        dispatch(updateOrder({ id, updateFunc: (quantity) => quantity + 1 }));
     };
 
     const decrement = (id) => {
-        updateOrder(id, prevQuantity => (prevQuantity > 1 ? prevQuantity - 1 : prevQuantity));
+        dispatch(updateOrder({ id, updateFunc: (quantity) => (quantity > 1 ? quantity - 1 : quantity) }));
     };
 
     return (
@@ -29,13 +30,17 @@ function Order() {
                         <h3>{(elem.price * elem.quantity).toFixed(2)} €</h3>
                     </div>
                     <div className='butOrder'>
-                        <button onClick={() => decrement(elem.id)}><img src={require("./minus.png")} alt="icon" className="butMinusOrd" /></button>
+                        <button onClick={() => decrement(elem.id)}>
+                            <img src="/image/minus.png" alt="icon" className="butMinusOrd" />
+                        </button>
                         <p className='sumOrder'>{elem.quantity}</p>
-                        <button onClick={() => increment(elem.id)}><img src={require("./plus.png")} alt="icon" className="butPlusOrd" /></button>
+                        <button onClick={() => increment(elem.id)}>
+                            <img src="/image/plus.png" alt="icon" className="butPlusOrd" />
+                        </button>
                     </div>
                     <div className='butDelOde'>
-                        <button onClick={() => removeFromOrder(elem.id)}>
-                            <img src={require("./delete.jpg")} alt="icon" className="butDelOrd" />
+                        <button onClick={() => dispatch(removeFromOrder(elem.id))}>
+                            <img src="/image/delete.jpg" alt="icon" className="butDelOrd" />
                         </button>
                     </div>
                 </div>
