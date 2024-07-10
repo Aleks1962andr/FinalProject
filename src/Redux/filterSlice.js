@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { data } from '../Data';
+import { data } from '../data';
 
 const groupBy = (items, key) => {
   return items.reduce((result, item) => {

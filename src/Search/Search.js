@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { data } from '../Data';
+import { data } from '../data';
 import { Link } from 'react-router-dom';
 import './Search.css';
 import Swal from 'sweetalert2';

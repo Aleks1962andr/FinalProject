@@ -1,5 +1,5 @@
-import { useState, useEffect, useContext } from 'react';
-import { dataaction } from './DataAction';
+import { useState, useEffect} from 'react';
+import { dataaction } from './dataAction';
 import { useParams, useNavigate } from 'react-router-dom';
 import './cartaction.css';
 
@@ -24,9 +24,9 @@ function CartAction() {
     return (
         <div className={`container ${overlayActive ? 'overlay-active' : ''}`}>
             <div className="overlay" onClick={() => setOverlayActive(false)}></div>
-            {dataaction.filter((item) => item.titleac === titleac).map((elem, elemId) => (
+            {dataaction.filter((item) => item.titleac === titleac).map((elem) => (
               
-                <div key={elemId} className='blockCartAction'>
+                <div key={elem.id} className='blockCartAction'>
                     <div>
                         <img src={process.env.PUBLIC_URL + elem.imageac} width="400px" alt="foto" className='cartActionImg'/>
                     </div>

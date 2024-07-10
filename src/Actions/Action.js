@@ -1,4 +1,4 @@
-import { dataaction } from "./DataAction";    
+import { dataaction } from "./dataAction";    
 import { useNavigate } from 'react-router-dom';
 import './action.css';
 import { Link } from "react-router-dom";
@@ -14,8 +14,8 @@ function Action() {
      <h1>АКЦИИ</h1>  
       </div>
       <div className="action1">  
-      {dataaction.map((elem, elemId) => (
-                <div key={elemId} className="actionBlock">
+      {dataaction.map((elem) => (
+                <div key={elem.id} className="actionBlock">
                     <div>
                         <img src={process.env.PUBLIC_URL + elem.imageac} width="400px" alt="foto" className="actionImage"/>
                     </div>

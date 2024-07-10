@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { dataaction } from "./DataAction";
+import { dataaction } from "./dataAction";
 import './ActionMainPage.css';
 import { Link } from "react-router-dom";
-import rightImage from './right.jpg';
-import leftImage from './left.jpg';
+import rightImage from './Assets/right.jpg';
+import leftImage from './Assets/left.jpg';
 
 function ActionMainPage() {
  const[picture, setPicture] =useState(0);

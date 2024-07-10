@@ -25,7 +25,7 @@ function Sorting({ sortOption, setSortOption }) {
 
       <div className='blockSortPosition'>
         <div>
-          <img src={require("./bezsort.png")} alt="icon" className="iconSort" />
+          <img src={require("./Assets/bezsort.png")} alt="icon" className="iconSort" />
         </div>
         <div>
           <label>без сортировки</label>
@@ -43,7 +43,7 @@ function Sorting({ sortOption, setSortOption }) {
 
       <div className='blockSortPosition'>
         <div>
-          <img src={require("./bolsh.png")} alt="icon" className="iconSort" />
+          <img src={require("./Assets/bolsh.png")} alt="icon" className="iconSort" />
         </div>
         <div>
           <label>сначала дороже</label>
@@ -61,7 +61,7 @@ function Sorting({ sortOption, setSortOption }) {
 
       <div className='blockSortPosition'>
         <div>
-          <img src={require("./mensh.png")} alt="icon" className="iconSort" />
+          <img src={require("./Assets/mensh.png")} alt="icon" className="iconSort" />
         </div>
         <div>
           <label>сначала дешевле</label>

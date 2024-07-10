@@ -1,6 +1,6 @@
 import './colontitul.css';
-import logoInst from './instag.jpg'
-import logoWatts from './watts.jpg'
+import logoInst from './Assets/instag.jpg'
+import logoWatts from './Assets/watts.jpg'
 import { Link } from "react-router-dom";
 
 function Colontitul() {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { data } from '../Data';
+import { data } from '../data';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToOrder } from '../Redux/cartSlice';
@@ -32,8 +32,8 @@ function CartDish() {
     return (
         <div className={`container ${overlayActive ? 'overlay-active' : ''}`}>
             <div className="overlay" onClick={() => setOverlayActive(false)}></div>
-            {data.filter((item) => item.title === title).map((elem, elemId) => (
-                <div key={elemId} className="block">
+            {data.filter((item) => item.title === title).map((elem) => (
+                <div key={elem.id} className="block">
                     <div>
                         <img src={process.env.PUBLIC_URL + elem.image} width="400px" alt="foto" className="blockCartDishImg" />
                     </div>
